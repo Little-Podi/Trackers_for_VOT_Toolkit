@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Accuracy-Robustness (VOT toolkit report)</title>
+    <link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="./resources/css/report.css"/>
+    <script type="text/javascript" src="./resources/js/jquery.js"></script>
+    <script type="text/javascript" src="./resources/js/bootstrap.js"></script>
+    <script type="text/javascript" src="./resources/js/layout.js"></script>
+    <script type="text/javascript" src="./resources/js/jquery.export.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1>Accuracy-Robustness</h1>
+    <h2>Experiment baseline</h2>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_mean.png" alt="AR plot for experiment baseline (mean)"/>
+        <div class="title">AR plot for experiment baseline (mean)</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_weighted_mean.png"
+             alt="AR plot for experiment baseline (weighted_mean)"/>
+        <div class="title">AR plot for experiment baseline (weighted_mean)</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_pooled.png" alt="AR plot for experiment baseline (pooled)"/>
+        <div class="title">AR plot for experiment baseline (pooled)</div>
+    </div>
+    <div class="table-wrapper">
+        <div class="title">Accuracy</div>
+        <table class=" table">
+            <thead>
+            <tr>
+                <th colspan="1" rowspan="1">&nbsp;</th>
+                <th>tag_camera_motion</th>
+                <th>tag_empty</th>
+                <th>tag_illum_change</th>
+                <th>tag_motion_change</th>
+                <th>tag_occlusion</th>
+                <th>tag_size_change</th>
+                <th class="average">Mean</th>
+                <th class="average">Weighted mean</th>
+                <th class="average">Pooled</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>ATOM</th>
+                <td data-numeric="0.617675" class="second">0.6177</td>
+                <td data-numeric="0.594387" class="second">0.5944</td>
+                <td data-numeric="0.581206">0.5812</td>
+                <td data-numeric="0.595427" class="third">0.5954</td>
+                <td data-numeric="0.470074">0.4701</td>
+                <td data-numeric="0.613918" class="first">0.6139</td>
+                <td data-numeric="0.578781" class="third">0.5788</td>
+                <td data-numeric="0.594544" class="second">0.5945</td>
+                <td data-numeric="0.603944" class="first">0.6039</td>
+            </tr>
+            <tr>
+                <th>DAT</th>
+                <td data-numeric="0.447724">0.4477</td>
+                <td data-numeric="0.451123">0.4511</td>
+                <td data-numeric="0.334282">0.3343</td>
+                <td data-numeric="0.423946">0.4239</td>
+                <td data-numeric="0.353795">0.3538</td>
+                <td data-numeric="0.453814">0.4538</td>
+                <td data-numeric="0.410780">0.4108</td>
+                <td data-numeric="0.435501">0.4355</td>
+                <td data-numeric="0.444831">0.4448</td>
+            </tr>
+            <tr>
+                <th>DiMP</th>
+                <td data-numeric="0.602328">0.6023</td>
+                <td data-numeric="0.591933" class="third">0.5919</td>
+                <td data-numeric="0.608122" class="third">0.6081</td>
+                <td data-numeric="0.593375">0.5934</td>
+                <td data-numeric="0.454313">0.4543</td>
+                <td data-numeric="0.601058" class="second">0.6011</td>
+                <td data-numeric="0.575188">0.5752</td>
+                <td data-numeric="0.586081">0.5861</td>
+                <td data-numeric="0.593299">0.5933</td>
+            </tr>
+            <tr>
+                <th>ECO</th>
+                <td data-numeric="0.553190">0.5532</td>
+                <td data-numeric="0.515168">0.5152</td>
+                <td data-numeric="0.477999">0.4780</td>
+                <td data-numeric="0.493642">0.4936</td>
+                <td data-numeric="0.436682">0.4367</td>
+                <td data-numeric="0.453425">0.4534</td>
+                <td data-numeric="0.488351">0.4884</td>
+                <td data-numeric="0.510108">0.5101</td>
+                <td data-numeric="0.520235">0.5202</td>
+            </tr>
+            <tr>
+                <th>GFSDCF</th>
+                <td data-numeric="0.571376">0.5714</td>
+                <td data-numeric="0.531058">0.5311</td>
+                <td data-numeric="0.558075">0.5581</td>
+                <td data-numeric="0.567973">0.5680</td>
+                <td data-numeric="0.492086" class="first">0.4921</td>
+                <td data-numeric="0.500455">0.5005</td>
+                <td data-numeric="0.536837">0.5368</td>
+                <td data-numeric="0.544285">0.5443</td>
+                <td data-numeric="0.550473">0.5505</td>
+            </tr>
+            <tr>
+                <th>KCF</th>
+                <td data-numeric="0.478286">0.4783</td>
+                <td data-numeric="0.506811">0.5068</td>
+                <td data-numeric="0.553543">0.5535</td>
+                <td data-numeric="0.435869">0.4359</td>
+                <td data-numeric="0.411219">0.4112</td>
+                <td data-numeric="0.336621">0.3366</td>
+                <td data-numeric="0.453725">0.4537</td>
+                <td data-numeric="0.458706">0.4587</td>
+                <td data-numeric="0.468501">0.4685</td>
+            </tr>
+            <tr>
+                <th>LADCF</th>
+                <td data-numeric="0.552988">0.5530</td>
+                <td data-numeric="0.514467">0.5145</td>
+                <td data-numeric="0.508895">0.5089</td>
+                <td data-numeric="0.554147">0.5541</td>
+                <td data-numeric="0.488209" class="second">0.4882</td>
+                <td data-numeric="0.468369">0.4684</td>
+                <td data-numeric="0.514512">0.5145</td>
+                <td data-numeric="0.525878">0.5259</td>
+                <td data-numeric="0.529561">0.5296</td>
+            </tr>
+            <tr>
+                <th>MCCT</th>
+                <td data-numeric="0.560310">0.5603</td>
+                <td data-numeric="0.541292">0.5413</td>
+                <td data-numeric="0.570923">0.5709</td>
+                <td data-numeric="0.553705">0.5537</td>
+                <td data-numeric="0.459718">0.4597</td>
+                <td data-numeric="0.474477">0.4745</td>
+                <td data-numeric="0.526738">0.5267</td>
+                <td data-numeric="0.535652">0.5357</td>
+                <td data-numeric="0.543232">0.5432</td>
+            </tr>
+            <tr>
+                <th>NCC</th>
+                <td data-numeric="0.475143">0.4751</td>
+                <td data-numeric="0.493285">0.4933</td>
+                <td data-numeric="0.512568">0.5126</td>
+                <td data-numeric="0.448687">0.4487</td>
+                <td data-numeric="0.442791">0.4428</td>
+                <td data-numeric="0.339584">0.3396</td>
+                <td data-numeric="0.452010">0.4520</td>
+                <td data-numeric="0.457808">0.4578</td>
+                <td data-numeric="0.466457">0.4665</td>
+            </tr>
+            <tr>
+                <th>SiamMask</th>
+                <td data-numeric="0.617424" class="third">0.6174</td>
+                <td data-numeric="0.589773">0.5898</td>
+                <td data-numeric="0.625480" class="first">0.6255</td>
+                <td data-numeric="0.614797" class="first">0.6148</td>
+                <td data-numeric="0.473402">0.4734</td>
+                <td data-numeric="0.586721" class="third">0.5867</td>
+                <td data-numeric="0.584600" class="first">0.5846</td>
+                <td data-numeric="0.594146" class="third">0.5941</td>
+                <td data-numeric="0.601042" class="third">0.6010</td>
+            </tr>
+            <tr>
+                <th>SiamRPNpp</th>
+                <td data-numeric="0.620941" class="first">0.6209</td>
+                <td data-numeric="0.603527" class="first">0.6035</td>
+                <td data-numeric="0.614873" class="second">0.6149</td>
+                <td data-numeric="0.612232" class="second">0.6122</td>
+                <td data-numeric="0.488052" class="third">0.4881</td>
+                <td data-numeric="0.548595">0.5486</td>
+                <td data-numeric="0.581370" class="second">0.5814</td>
+                <td data-numeric="0.595050" class="first">0.5951</td>
+                <td data-numeric="0.603529" class="second">0.6035</td>
+            </tr>
+            <tr>
+                <th>SRDCF</th>
+                <td data-numeric="0.527829">0.5278</td>
+                <td data-numeric="0.533892">0.5339</td>
+                <td data-numeric="0.521728">0.5217</td>
+                <td data-numeric="0.480017">0.4800</td>
+                <td data-numeric="0.427763">0.4278</td>
+                <td data-numeric="0.437780">0.4378</td>
+                <td data-numeric="0.488168">0.4882</td>
+                <td data-numeric="0.502918">0.5029</td>
+                <td data-numeric="0.516695">0.5167</td>
+            </tr>
+            <tr>
+                <th>Staple</th>
+                <td data-numeric="0.551020">0.5510</td>
+                <td data-numeric="0.575017">0.5750</td>
+                <td data-numeric="0.562397">0.5624</td>
+                <td data-numeric="0.535063">0.5351</td>
+                <td data-numeric="0.476141">0.4761</td>
+                <td data-numeric="0.456981">0.4570</td>
+                <td data-numeric="0.526103">0.5261</td>
+                <td data-numeric="0.537950">0.5380</td>
+                <td data-numeric="0.549517">0.5495</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrapper">
+        <div class="title">Robustness</div>
+        <table class=" table">
+            <thead>
+            <tr>
+                <th colspan="1" rowspan="1">&nbsp;</th>
+                <th>tag_camera_motion</th>
+                <th>tag_empty</th>
+                <th>tag_illum_change</th>
+                <th>tag_motion_change</th>
+                <th>tag_occlusion</th>
+                <th>tag_size_change</th>
+                <th class="average">Mean</th>
+                <th class="average">Weighted mean</th>
+                <th class="average">Pooled</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>ATOM</th>
+                <td data-numeric="20.000000">20.0000</td>
+                <td data-numeric="11.000000">11.0000</td>
+                <td data-numeric="2.000000" class="third">2.0000</td>
+                <td data-numeric="8.000000" class="third">8.0000</td>
+                <td data-numeric="13.000000">13.0000</td>
+                <td data-numeric="5.000000" class="second">5.0000</td>
+                <td data-numeric="9.833333">9.8333</td>
+                <td data-numeric="12.835501">12.8355</td>
+                <td data-numeric="41.000000" class="third">41.0000</td>
+            </tr>
+            <tr>
+                <th>DAT</th>
+                <td data-numeric="49.000000">49.0000</td>
+                <td data-numeric="42.000000">42.0000</td>
+                <td data-numeric="6.000000">6.0000</td>
+                <td data-numeric="24.000000">24.0000</td>
+                <td data-numeric="38.000000">38.0000</td>
+                <td data-numeric="18.000000">18.0000</td>
+                <td data-numeric="29.500000">29.5000</td>
+                <td data-numeric="37.525534">37.5255</td>
+                <td data-numeric="138.000000">138.0000</td>
+            </tr>
+            <tr>
+                <th>DiMP</th>
+                <td data-numeric="16.000000" class="second">16.0000</td>
+                <td data-numeric="5.000000" class="first">5.0000</td>
+                <td data-numeric="1.000000" class="second">1.0000</td>
+                <td data-numeric="5.000000" class="first">5.0000</td>
+                <td data-numeric="11.000000" class="second">11.0000</td>
+                <td data-numeric="3.000000" class="first">3.0000</td>
+                <td data-numeric="6.833333" class="second">6.8333</td>
+                <td data-numeric="8.910726" class="second">8.9107</td>
+                <td data-numeric="28.000000" class="first">28.0000</td>
+            </tr>
+            <tr>
+                <th>ECO</th>
+                <td data-numeric="26.000000">26.0000</td>
+                <td data-numeric="23.000000">23.0000</td>
+                <td data-numeric="0.000000" class="first">0.0000</td>
+                <td data-numeric="16.000000">16.0000</td>
+                <td data-numeric="18.000000">18.0000</td>
+                <td data-numeric="6.000000" class="third">6.0000</td>
+                <td data-numeric="14.833333">14.8333</td>
+                <td data-numeric="19.929758">19.9298</td>
+                <td data-numeric="65.000000">65.0000</td>
+            </tr>
+            <tr>
+                <th>GFSDCF</th>
+                <td data-numeric="19.000000" class="third">19.0000</td>
+                <td data-numeric="11.000000">11.0000</td>
+                <td data-numeric="1.000000" class="second">1.0000</td>
+                <td data-numeric="7.000000" class="second">7.0000</td>
+                <td data-numeric="11.000000" class="second">11.0000</td>
+                <td data-numeric="8.000000">8.0000</td>
+                <td data-numeric="9.500000" class="third">9.5000</td>
+                <td data-numeric="12.520598" class="third">12.5206</td>
+                <td data-numeric="42.000000">42.0000</td>
+            </tr>
+            <tr>
+                <th>KCF</th>
+                <td data-numeric="93.000000">93.0000</td>
+                <td data-numeric="101.000000">101.0000</td>
+                <td data-numeric="8.000000">8.0000</td>
+                <td data-numeric="54.000000">54.0000</td>
+                <td data-numeric="28.000000">28.0000</td>
+                <td data-numeric="27.000000">27.0000</td>
+                <td data-numeric="51.833333">51.8333</td>
+                <td data-numeric="73.909160">73.9092</td>
+                <td data-numeric="242.000000">242.0000</td>
+            </tr>
+            <tr>
+                <th>LADCF</th>
+                <td data-numeric="11.000000" class="first">11.0000</td>
+                <td data-numeric="7.000000" class="second">7.0000</td>
+                <td data-numeric="1.000000" class="second">1.0000</td>
+                <td data-numeric="8.000000" class="third">8.0000</td>
+                <td data-numeric="8.000000" class="first">8.0000</td>
+                <td data-numeric="3.000000" class="first">3.0000</td>
+                <td data-numeric="6.333333" class="first">6.3333</td>
+                <td data-numeric="7.974608" class="first">7.9746</td>
+                <td data-numeric="29.000000" class="second">29.0000</td>
+            </tr>
+            <tr>
+                <th>MCCT</th>
+                <td data-numeric="28.000000">28.0000</td>
+                <td data-numeric="26.000000">26.0000</td>
+                <td data-numeric="4.000000">4.0000</td>
+                <td data-numeric="10.000000">10.0000</td>
+                <td data-numeric="12.000000" class="third">12.0000</td>
+                <td data-numeric="6.000000" class="third">6.0000</td>
+                <td data-numeric="14.333333">14.3333</td>
+                <td data-numeric="20.130707">20.1307</td>
+                <td data-numeric="67.000000">67.0000</td>
+            </tr>
+            <tr>
+                <th>NCC</th>
+                <td data-numeric="254.000000">254.0000</td>
+                <td data-numeric="103.000000">103.0000</td>
+                <td data-numeric="20.000000">20.0000</td>
+                <td data-numeric="101.000000">101.0000</td>
+                <td data-numeric="52.000000">52.0000</td>
+                <td data-numeric="83.000000">83.0000</td>
+                <td data-numeric="102.166667">102.1667</td>
+                <td data-numeric="145.849312">145.8493</td>
+                <td data-numeric="447.000000">447.0000</td>
+            </tr>
+            <tr>
+                <th>SiamMask</th>
+                <td data-numeric="27.000000">27.0000</td>
+                <td data-numeric="10.000000" class="third">10.0000</td>
+                <td data-numeric="2.000000" class="third">2.0000</td>
+                <td data-numeric="15.000000">15.0000</td>
+                <td data-numeric="15.000000">15.0000</td>
+                <td data-numeric="12.000000">12.0000</td>
+                <td data-numeric="13.500000">13.5000</td>
+                <td data-numeric="17.047935">17.0479</td>
+                <td data-numeric="55.000000">55.0000</td>
+            </tr>
+            <tr>
+                <th>SiamRPNpp</th>
+                <td data-numeric="24.000000">24.0000</td>
+                <td data-numeric="11.000000">11.0000</td>
+                <td data-numeric="1.000000" class="second">1.0000</td>
+                <td data-numeric="10.000000">10.0000</td>
+                <td data-numeric="11.000000" class="second">11.0000</td>
+                <td data-numeric="8.000000">8.0000</td>
+                <td data-numeric="10.833333">10.8333</td>
+                <td data-numeric="14.693498">14.6935</td>
+                <td data-numeric="45.000000">45.0000</td>
+            </tr>
+            <tr>
+                <th>SRDCF</th>
+                <td data-numeric="46.000000">46.0000</td>
+                <td data-numeric="55.000000">55.0000</td>
+                <td data-numeric="7.000000">7.0000</td>
+                <td data-numeric="22.000000">22.0000</td>
+                <td data-numeric="27.000000">27.0000</td>
+                <td data-numeric="19.000000">19.0000</td>
+                <td data-numeric="29.333333">29.3333</td>
+                <td data-numeric="39.054343">39.0543</td>
+                <td data-numeric="128.000000">128.0000</td>
+            </tr>
+            <tr>
+                <th>Staple</th>
+                <td data-numeric="61.000000">61.0000</td>
+                <td data-numeric="50.000000">50.0000</td>
+                <td data-numeric="5.000000">5.0000</td>
+                <td data-numeric="20.000000">20.0000</td>
+                <td data-numeric="22.000000">22.0000</td>
+                <td data-numeric="11.000000">11.0000</td>
+                <td data-numeric="28.166667">28.1667</td>
+                <td data-numeric="41.063265">41.0633</td>
+                <td data-numeric="132.000000">132.0000</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3>Detailed plots</h3>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_ordering_overlap_baseline.png" alt="Orderings for overall overlap"/>
+        <div class="title">Orderings for overall overlap</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_ordering_failures_baseline.png" alt="Orderings for failures"/>
+        <div class="title">Orderings for failures</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_camera_motion.png"
+             alt="AR plot for tag tag_camera_motion in experiment baseline"/>
+        <div class="title">AR plot for tag tag_camera_motion in experiment baseline</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_empty.png"
+             alt="AR plot for tag tag_empty in experiment baseline"/>
+        <div class="title">AR plot for tag tag_empty in experiment baseline</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_illum_change.png"
+             alt="AR plot for tag tag_illum_change in experiment baseline"/>
+        <div class="title">AR plot for tag tag_illum_change in experiment baseline</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_motion_change.png"
+             alt="AR plot for tag tag_motion_change in experiment baseline"/>
+        <div class="title">AR plot for tag tag_motion_change in experiment baseline</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_occlusion.png"
+             alt="AR plot for tag tag_occlusion in experiment baseline"/>
+        <div class="title">AR plot for tag tag_occlusion in experiment baseline</div>
+    </div>
+    <div class="image-wrapper stacking">
+        <img src="images/baseline_ar_arplot_baseline_tag_size_change.png"
+             alt="AR plot for tag tag_size_change in experiment baseline"/>
+        <div class="title">AR plot for tag tag_size_change in experiment baseline</div>
+    </div>
+
+    <div class="clearer"></div>
+</div>
+<footer>
+    <div class="poweredby">Generated by VOT toolkit.</div>
+    <ul class="metadata">
+        <li>Generated at: 2020-07-15 22:10:15</li>
+        <li>Toolkit version: VOT toolkit 7.0</li>
+    </ul>
+</footer>
+</body>
+</html>
