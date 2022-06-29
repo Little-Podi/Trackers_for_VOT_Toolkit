@@ -158,7 +158,6 @@ function handle = tracker_report(handle, region, confidence)
 
 end
 
-
 function tracker_quit(handle)
 % tracker_quit Closes the communication and saves the data
 %

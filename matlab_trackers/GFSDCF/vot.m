@@ -158,7 +158,6 @@ traxserver('status', region, parameters);
 
 end
 
-
 function tracker_quit(handle)
 % tracker_quit Closes the communication and saves the data
 %
