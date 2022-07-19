@@ -4,7 +4,7 @@
 
 ### This repository contains several trackers I have integrated into [VOT toolkit](https://github.com/votchallenge/vot-toolkit), you can see the README in each tracker's folder for more details.
 
-### Successfully integrated trackers at present (some of them haven't uploaded at present):
+### Successfully integrated trackers at present (some of them haven't uploaded yet):
 
 - #### MATLAB trackers: DAT, ECO, GFS-DCF, KCF, LADCF, MCCT, SRDCF, Staple, UPDT, ASRCF, BACF, CCOT, CFNet, MDNet, SiamFC, SiamFC-triplet, DSST.
 
@@ -50,11 +50,11 @@ experiments = {baseline};
 
 ## Methods
 
-### As far as I know, there mainly three ways to integrate a new tracker.
+### As far as I know, there are mainly three ways to integrate a new tracker.
 
 1. ### As mentioned in suggestions, if the wrapper is provided by the author, you will be lucky because all you need is to replace the vot function files such as vot.m or something.
 
-2. ### However, because of the big difference between each version of VOT toolkit, the method above doesn't work in many ways. During the integration work, I found that if the input of the run file is the sequence while the output is the results (i.e. OTB format), then the wrapper provided by Martin Danelljan may be very useful.
+2. ### However, because of the big difference between each version of VOT toolkit, the method above doesn't work in many ways. During the integration work, I found that if the input of the run file is the sequence while the output is the results (i.e. OTB format), then the wrapper provided by [Martin Danelljan](https://martin-danelljan.github.io/) may be very useful.
 
    ```matlab
    function results = runfile(seq, res_path, bSaveImage, parameters)
